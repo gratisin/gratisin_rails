@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'welcome#index'
   namespace :api, defaults: { format: :json } do
-    # post 'login', to: 'auth#login'
-    # delete 'logout', to: 'auth#logout'
-    # post 'register', to: 'auth#register'
-    # get 'user', to: 'auth#user'
+    post 'login', to: 'auth#login'
+    delete 'logout', to: 'auth#logout'
+    post 'register', to: 'auth#register'
+    get 'user', to: 'auth#user'
     get 'wakeup', to: 'misc#wakeup'
   end
 end
