@@ -12,6 +12,13 @@
       "args": ["db:drop", "db:create", "db:migrate", "db:seed"]
     },
     {
+      "name": "Rake migrate",
+      "type": "Ruby",
+      "request": "launch",
+      "program": "${workspaceRoot}/bin/rake",
+      "args": ["db:migrate"]
+    },
+    {
       "name": "Rake seed",
       "type": "Ruby",
       "request": "launch",
