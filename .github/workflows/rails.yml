@@ -54,10 +54,6 @@ jobs:
           RAILS_ENV: test
           POSTGRES_PASSWORD: postgres
           RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
-
-        # run: |
-        #   cp config/database.ci.yml config/database.yml
-        #   rake db:create db:migrate
         run: |
           rake db:create db:migrate
 
@@ -71,13 +67,13 @@ jobs:
           RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
         run: rake
 
-      # - name: Deploy
-      #   uses: akhileshns/heroku-deploy@v3.4.6
-      #   with:
-      #     heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-      #     heroku_app_name: tanyain-rails
-      #     heroku_email: arif.ikhsanudin.id@gmail.com
+      - name: Deploy
+        uses: akhileshns/heroku-deploy@v3.4.6
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: gratisin-rails
+          heroku_email: arif.ikhsanudin.id@gmail.com
 
-      # - name: Migrate and seed
-      #   run: |
-      #     heroku run rake db:migrate db:seed --app=tanyain-rails
+      - name: Migrate and seed
+        run: |
+          heroku run rake db:migrate db:seed --app=gratisin-rails
