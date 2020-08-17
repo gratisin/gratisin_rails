@@ -5,6 +5,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Rake reset database",
+      "type": "Ruby",
+      "request": "launch",
+      "program": "${workspaceRoot}/bin/rake",
+      "args": ["db:drop", "db:create", "db:migrate", "db:seed"]
+    },
+    {
       "name": "Listen for rdebug-ide",
       "type": "Ruby",
       "request": "attach",
