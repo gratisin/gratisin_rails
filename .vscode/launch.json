@@ -12,6 +12,20 @@
       "args": ["db:drop", "db:create", "db:migrate", "db:seed"]
     },
     {
+      "name": "Rake seed",
+      "type": "Ruby",
+      "request": "launch",
+      "program": "${workspaceRoot}/bin/rake",
+      "args": ["db:seed"]
+    },
+    {
+      "name": "Rake migrate and seed",
+      "type": "Ruby",
+      "request": "launch",
+      "program": "${workspaceRoot}/bin/rake",
+      "args": ["db:migrate", "db:seed"]
+    },
+    {
       "name": "Listen for rdebug-ide",
       "type": "Ruby",
       "request": "attach",
