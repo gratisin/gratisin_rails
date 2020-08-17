@@ -15,4 +15,9 @@ if User.count.zero?
   admin.admin!
 end
 
+if Product.count.zero?
+  Product.create(name: 'Baju baru tidak terpakai', detail: 'quia qui numquam' user_id: 1)
+  Product.create(name: 'Flashdisk 8GB lama', user_id: 1)
+end
+
 p 'seed done'
