@@ -1,5 +1,6 @@
 module Types
   class MutationType < Types::BaseObject
+    field :get_product, mutation: Mutations::GetProduct
     field :delete_product, mutation: Mutations::DeleteProduct
     field :update_product, mutation: Mutations::UpdateProduct
     field :create_product, mutation: Mutations::CreateProduct

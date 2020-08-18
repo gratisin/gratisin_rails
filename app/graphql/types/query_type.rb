@@ -20,8 +20,7 @@ module Types
 
     field :my_products, [ProductType], null: false
     def my_products
-      current_user = ensure_current_user
-      current_user.products
+      context[:current_user].products
     end
   end
 end
